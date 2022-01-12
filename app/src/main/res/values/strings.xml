@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">ProyectoFinal_AprendeIngles</string>
+    <string name="numeros">Números</string>
+    <string name="activado">activado</string>
+    <string name="desactivado">desactivado</string>
+    <string name="dias">Días</string>
+    <string name="colores">Colores</string>
+    <string name="favoritos">Favoritos</string>
+    <string name="preferencias">Preferencias</string>
+    <string name="anyadir_palabra">Añadir Palabra</string>
+    <string name="fallo_respuesta">Fallo en la respuesta</string>
+    <string name="palabra">Palabra</string>
+    <string name="traduccion">Traducción</string>
+    <string name="tipo">Tipo</string>
+    <string name="actualizar">Actualizar</string>
+    <string name="borrar">Borrar</string>
+    <string name="insertar">Insertar</string>
+
+    <string-array name="tipoPalabras">
+        <item>Números</item>
+        <item>Días</item>
+        <item>Colores</item>
+    </string-array>
+</resources>

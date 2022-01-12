@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu_seccion_num"
+            android:title="@string/numeros"/>
+        <item
+            android:id="@+id/menu_seccion_dias"
+            android:title="@string/dias"/>
+        <item
+            android:id="@+id/menu_seccion_colores"
+            android:title="@string/colores"/>
+        <item
+            android:id="@+id/menu_seccion_fav"
+            android:title="@string/favoritos"/>
+        <item
+            android:id="@+id/menu_seccion_add"
+            android:title="@string/anyadir_palabra"/>
+        <item
+            android:id="@+id/menu_seccion_preferencias"
+            android:title="@string/preferencias"/>
+    </group>
+</menu>
