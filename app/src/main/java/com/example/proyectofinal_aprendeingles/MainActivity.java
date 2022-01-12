@@ -205,14 +205,6 @@ public class MainActivity extends AppCompatActivity {
         MainActivity.palabraAdapter = palabraAdapter;
     }
 
-    private void inicializar(){
-//        getSupportFragmentManager().beginTransaction()
-//                .replace(R.id.content_frame, new fragmentColores())
-//                .addToBackStack(null)
-//                .commit();
-//        setTitle(R.string.colores);
-    } //TODO en modo noche error
-
     private void getDatos(){
         ApiPalabras api = retrofit.create(ApiPalabras.class);
 
@@ -223,9 +215,6 @@ public class MainActivity extends AppCompatActivity {
             public void onResponse(Call<ArrayList<Palabra>> call, Response<ArrayList<Palabra>> response) {
                 if (response.isSuccessful()){
                     listPalabra = response.body();
-
-                    //Fragment inicial
-                    inicializar();
                 } else{
                     Toast.makeText(getApplicationContext(),
                             R.string.fallo_respuesta, Toast.LENGTH_SHORT).show();
