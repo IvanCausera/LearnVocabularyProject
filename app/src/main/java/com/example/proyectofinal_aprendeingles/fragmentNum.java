@@ -63,9 +63,14 @@ public class fragmentNum extends Fragment {
         recyclerView.setAdapter(palabraAdapter);
 
         ArrayList<Palabra> filterList = new ArrayList<>();
-        for (Palabra p:
-                MainActivity.getListPalabra()) {
-            if (p.getTipo() == Palabra.TIPO_NUM) filterList.add(p);
+        ArrayList<Palabra> originalList = MainActivity.getListPalabra();
+        if (originalList != null && !originalList.isEmpty()){
+            for (Palabra p: originalList) {
+                if (p.getTipo() == Palabra.TIPO_NUM) filterList.add(p);
+            }
+        } else {
+            Toast.makeText(getContext(),
+                    R.string.fallo_respuesta, Toast.LENGTH_SHORT).show();
         }
 
         palabraAdapter.addToList(filterList);

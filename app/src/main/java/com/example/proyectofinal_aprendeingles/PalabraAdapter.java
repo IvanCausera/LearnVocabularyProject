@@ -1,6 +1,7 @@
 package com.example.proyectofinal_aprendeingles;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -92,6 +93,7 @@ public class PalabraAdapter extends RecyclerView.Adapter<PalabraAdapter.PalabraV
     }
 
     public void removeFromList(int pos){
+        Log.i("EEEE", pos + " - " + list.size());
         this.list.remove(pos);
         notifyDataSetChanged();
     }

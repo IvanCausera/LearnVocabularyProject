@@ -265,7 +265,7 @@ public class MainActivity extends AppCompatActivity {
                 if (response.isSuccessful()){
                     Palabra p = response.body();
                     if (p.getTipo() == fragmentTipe)  palabraAdapter.updateList(posPulsada, p);
-                    else palabraAdapter.removeFromList(posPulsada);
+//                    else palabraAdapter.removeFromList(posPulsada);
 
                     if (p.isFav()) palabraViewModel.update(p);
 

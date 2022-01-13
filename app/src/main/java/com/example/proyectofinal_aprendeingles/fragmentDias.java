@@ -4,6 +4,7 @@ import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -19,6 +20,7 @@ import android.widget.Toast;
 import com.example.proyectofinal_aprendeingles.basedatos.Palabra;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class fragmentDias extends Fragment {
 
@@ -64,9 +66,14 @@ public class fragmentDias extends Fragment {
         recyclerView.setAdapter(palabraAdapter);
 
         ArrayList<Palabra> filterList = new ArrayList<>();
-        for (Palabra p:
-                MainActivity.getListPalabra()) {
-            if (p.getTipo() == Palabra.TIPO_DIA) filterList.add(p);
+        ArrayList<Palabra> originalList = MainActivity.getListPalabra();
+        if (originalList != null && !originalList.isEmpty()){
+            for (Palabra p: originalList) {
+                if (p.getTipo() == Palabra.TIPO_DIA) filterList.add(p);
+            }
+        } else {
+            Toast.makeText(getContext(),
+                    R.string.fallo_respuesta, Toast.LENGTH_SHORT).show();
         }
 
         palabraAdapter.addToList(filterList);
